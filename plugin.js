@@ -132,9 +132,9 @@ class WasmPackPlugin {
     info('ℹ️  Installing wasm-pack \n');
 
     if (commandExistsSync("npm")) {
-      return runProcess("npm", ["install", "-g", "wasm-pack"], {});
+      return runProcess("npm", ["install", "-g", "@broxus/wasm-pack"], {});
     } else if (commandExistsSync("yarn")) {
-      return runProcess("yarn", ["global", "add", "wasm-pack"], {});
+      return runProcess("yarn", ["global", "add", "@broxus/wasm-pack"], {});
     } else {
       error(
         "⚠️ could not install wasm-pack, you must have yarn or npm installed"
