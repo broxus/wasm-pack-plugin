@@ -1,6 +1,6 @@
 {
   "name": "@broxus/wasm-pack-plugin",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "Webpack plugin for Rust",
   "main": "plugin.js",
   "types": "plugin.d.ts",
@@ -27,10 +27,10 @@
   },
   "homepage": "https://github.com/wasm-tool/wasm-pack-plugin#readme",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "command-exists": "^1.2.7",
-    "watchpack": "^1.6.0",
-    "which": "^2.0.2"
+    "chalk": "^4.1",
+    "command-exists": "^1.2",
+    "watchpack": "^2.3",
+    "which": "^2.0"
   },
   "devDependencies": {
     "@types/webpack": "*"
