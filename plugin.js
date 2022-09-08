@@ -123,7 +123,7 @@ class WasmPackPlugin {
 
     _makeEmpty() {
         try {
-            fs.mkdirSync(this.outDir, {recursive: true})
+            fs.mkdirSync(this.outDir, { recursive: true })
         } catch (e) {
             if (e.code !== 'EEXIST') {
                 throw e
@@ -144,14 +144,18 @@ class WasmPackPlugin {
 
         info('ℹ️  Installing wasm-pack \n')
 
-        if (commandExistsSync("npm")) {
-            return runProcess("npm", ["install", "-g", "@broxus/wasm-pack"], {});
-        } else if (commandExistsSync("yarn")) {
-            return runProcess("yarn", ["global", "add", "@broxus/wasm-pack"], {});
+        if (commandExistsSync('npm')) {
+            return runProcess('npm', ['install', '-g', '@broxus/wasm-pack'], {})
+        } else if (commandExistsSync('yarn')) {
+            return runProcess(
+                'yarn',
+                ['global', 'add', '@broxus/wasm-pack'],
+                {}
+            )
         } else {
             error(
-                "⚠️ could not install wasm-pack, you must have yarn or npm installed"
-            );
+                '⚠️ could not install wasm-pack, you must have yarn or npm installed'
+            )
         }
         return false
     }
